@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Message</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+        #message {
+            font-size: 48px; /* Big font size */
+            display: none; /* Initially hidden */
+            color: #333;
+        }
+    </style>
+</head>
+<body onclick="toggleMessage()">
+    <div id="message">This is a big message!</div>
+
+    <script>
+        function toggleMessage() {
+            const messageDiv = document.getElementById('message');
+            if (messageDiv.style.display === 'none' || messageDiv.style.display === '') {
+                messageDiv.style.display = 'block'; // Show the message
+            } else {
+                messageDiv.style.display = 'none'; // Hide the message
+            }
+        }
+    </script>
+</body>
+</html>
